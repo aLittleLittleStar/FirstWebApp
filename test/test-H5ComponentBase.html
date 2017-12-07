@@ -18,9 +18,11 @@
             width: 340px;
             height: 540px;
             background-color: #fff;
+            /*水平垂直居中*/
             position: absolute;
             left: 50%;
             top: 50%;
+            /*margintop是高度的一半，左边是宽度的一半*/
             margin: -270px 0 0 -170px;
         }
     </style>
@@ -43,7 +45,7 @@
                 width : 514,
                 height : 306,
 
-                bg  : './p1_people.png',
+                bg  : '../imgs/p1_people.png',
                 css : {
                     bottom:0,
                     opacity:0,
@@ -52,8 +54,9 @@
                 animateOut:{ bottom:0,opacity:0 },
                 center : true,
             }
-
+            // new H5ComponentBase把cfg传进去
             var h5 = new H5ComponentBase( 'myName', cfg );
+            // 把h5变量[而不是字符串]添加到iphone里面
             $('.iphone').append(h5);
 
 
